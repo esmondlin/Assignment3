@@ -1,0 +1,17 @@
+CREATE TABLE `user` (
+  `SerialNo` int(10) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `Nric` varchar(255) DEFAULT NULL,
+  `Email` varchar(255) DEFAULT NULL,
+  `DOB` varchar(255) DEFAULT NULL,
+  `Mobile` int(8) DEFAULT NULL,
+  `Password` varchar(255) DEFAULT NULL,
+  `Role` varchar(10) DEFAULT NULL,
+  `SecurityQuestion` varchar(255) DEFAULT NULL,
+  `SecurityAnswer` varchar(255) DEFAULT NULL,
+  `FirstLogin` int(1) DEFAULT NULL,
+  `BlockStatus` int(1) DEFAULT NULL,
+  `NumberOfAttempts` int(1) DEFAULT NULL,
+  PRIMARY KEY (`SerialNo`),
+  UNIQUE KEY `Nric` (`Nric`,`Email`,`Mobile`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8
